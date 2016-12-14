@@ -2,11 +2,17 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>jquery Todo App</title>
 	<script src="jquery-1.8.1.min.js"></script>
 	<script src="action.js"></script>
+	<style type="text/css">
+		* {margin: 10px; padding: 0;}
+		li {list-style: none;}
+		li.active {background:rgba(255, 125, 125, 0.2);}
+	</style>
 </head>
 <body>
+
 	<div class="important_wrap">
 		<select>
 			<option>선택해주세요</option>
@@ -20,7 +26,7 @@
 	</div>
 	<div class="option_wrap">
 		<p class="important"><a href="#none">모두</a> <a href="#none">매우중요</a> <a href="#none">중요</a> <a href="#none">보통</a></p>
-		<p class="confirm"><a href="#none" class="btn btn_active">모두</a> <a href="#none" class="btn btn_confirm">완료</a> <a href="#none">미완료</a></p>
+		<p class="confirm"><a href="#none">모두</a> <a href="#none" class="btn btn_confirm">완료</a> <a href="#none" class="btn btn_active">미완료</a></p>
 	</div>
 	<div calss="description_wrap">
 		<ul class="description_list">
@@ -35,12 +41,6 @@
 				</div>
 			</li>
 			-->
-		</ul>
-	</div>
-	<div class="footer_wrap">
-		<ul class="description_view_wrap">
-			<li><a href="#none" class="btn btn_active">active</a></li>
-			<li><a href="#none" class="btn btn_confirm">confirm</a></li>
 		</ul>
 	</div>
 </body>
