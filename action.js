@@ -1,7 +1,7 @@
 var dataGara = [
-	{id:0, important: '매우중요', descriptionText: 1, addDate: '2016.12.12', todo: 'active'},
-	{id:1, important: '중요', descriptionText: 2, addDate: '2016.12.13', todo: 'active'},
-	{id:2, important: '보통', descriptionText: 3, addDate: '2016.12.14', todo: 'active'}
+	{id:0, important: '매우중요', descriptionText: "해야할일1", addDate: '2016.12.12', todo: 'active'},
+	{id:1, important: '중요', descriptionText: "해야할일2", addDate: '2016.12.13', todo: 'active'},
+	{id:2, important: '보통', descriptionText: "해야할일3", addDate: '2016.12.14', todo: 'active'}
 ];
 
 $('document').ready(function(){
@@ -102,9 +102,9 @@ $('document').ready(function(){
 	
 	
 	// active confirm 귀찮다... 이젠 진짜 의식의 흐름되로...
-	$(document).on('click', '.description_list > li', function(){
-		var idx = $(this).index();
-		if( $(this).hasClass('active')){
+	$(document).on('click', '.description_list > li > a', function(){
+		var idx = $(this).parent('li').index();
+		if( $(this).parent('li').hasClass('active')){
 			dataGara[idx].todo = 'confirm';
 		}else{
 			dataGara[idx].todo = 'active';
