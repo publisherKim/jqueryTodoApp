@@ -19,7 +19,7 @@ $('document').ready(function(){
 	function makeLi(){
 		$descriptionList.empty();
 		for(var i = 0; i < dataGara.length; i++){
-		$descriptionList.append('<li class="'+ dataGara[i].todo +'" data-important="'+ dataGara[i].important +'">중요도 : <span class="text">"'+dataGara[i].important+'"</span> 추가일 : <span class="add_date">"'+ dataGara[i].addDate +'"</span><a href="#none">"'+dataGara[i].descriptionText+'"</a> <input class="description_text" type="text" /> <a href="#none" class="btn btn_modify">수정</a> <a href="#none" class="btn btn_delete">삭제</a></li>');
+		$descriptionList.append('<li class="'+ dataGara[i].todo +'" data-important="'+ dataGara[i].important +'">중요도 : <span class="text">"'+dataGara[i].important+'"</span> 추가일 : <span class="add_date">"'+ dataGara[i].addDate +'"</span><a href="#none" class="todo">"'+dataGara[i].descriptionText+'"</a> <input class="description_text" type="text" /> <a href="#none" class="btn btn_modify">수정</a> <a href="#none" class="btn btn_delete">삭제</a></li>');
 		}		
 	}
 	makeLi();
@@ -91,7 +91,7 @@ $('document').ready(function(){
 	
 	
 	// active confirm 귀찮다... 이젠 진짜 의식의 흐름되로...
-	$(document).on('click', '.description_list > li > a', function(){
+	$(document).on('click', '.description_list > li > a.todo', function(){
 		var idx = $(this).parent('li').index();
 		if( $(this).parent('li').hasClass('active')){
 			dataGara[idx].todo = 'confirm';
